@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Color */
+
+:root {
+    --background-general: #171717;
+    --text-color: #fafafa;
+    --ancor: #facc15;
+}
+
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', Helvetica, sans-serif;
+    background-color: var(--background-general);
+    height: calc(100vh - 218px);
+}
+
+a, button {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    text-transform: lowercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ancor);
+}
+
+p {
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    background: var(--background-general);
+    border-bottom: solid 0px var(--text-color);
+}
+
+header h1 {
+    font-weight: 900;
+    color: var(--text-color);
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: solid 1px var(--text-color);
+}
+
+/* Nav */
+
+nav {
+    border-bottom: solid 1px var(--text-color);
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    color: var(--ancor);
+}
+
+/* Main */
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#content > div {
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* Footer */
+
+.menu > ul {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'sobre menu none contato';
+    padding: 10px 20px;
+    border-top: solid 1px var(--text-color);
+    gap: 20px;
+}
+
+footer > div {
+    width: 100%;
+}
+
+div > h2 {
+    margin-bottom: 5px;
+}
+
+/* Contact */
+.contactLinks {
+    display: flex;
+    gap: 10px;
+}
+
+/* Footer / Grid */
+.sobre {
+    grid-area: sobre;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.contato {
+    grid-area: contato;
+}

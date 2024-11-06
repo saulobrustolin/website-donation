@@ -1,0 +1,98 @@
+#container {
+    border: solid 1px var(--text-color);
+}
+
+/* Barra de progresso */
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+  
+.progress {
+    height: 100%;
+    background-color: #4caf50;
+    width: 0%;
+    border-radius: 10px 0 0 10px;
+    animation: moveBar 0.5s ease;
+}
+  
+@keyframes moveBar {
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+#container > div {
+    min-width: 200px;
+}
+
+div > h4 {
+    font-size: 18px;
+    color: var(--text-color)
+}
+
+.divTarget {
+    opacity: 0.3;
+    margin: 5px 0;
+}
+
+#value {
+    font-size: 32px;
+}
+
+/* Form */
+
+.divForm {
+    border: solid 1px var(--text-color);
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+button {
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--background-general);
+    font-style: italic;
+    background-color: var(--ancor);
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Obrigado */
+
+#divThanks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
