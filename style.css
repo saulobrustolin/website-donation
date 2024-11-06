@@ -135,3 +135,22 @@ div > h2 {
 .contato {
     grid-area: contato;
 }
+
+
+/* Responsividade */
+@media (min-width: 370px) and (max-width: 768px) {
+    footer {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 'sobre menu contato';
+    }
+}
+
+@media screen and (max-width: 370px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    #content {
+        max-height: 70%;
+    }
+}
